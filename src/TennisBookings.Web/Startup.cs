@@ -19,10 +19,10 @@ namespace TennisBookings.Web
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IWeatherForecaster, WeatherForecaster>();
+
             services.AddMvc()
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-
-            services.AddTransient<IWeatherForecaster, AmazingWeatherForecaster>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider serviceProvider)
