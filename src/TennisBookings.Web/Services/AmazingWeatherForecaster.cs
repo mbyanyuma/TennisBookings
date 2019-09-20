@@ -15,7 +15,7 @@ namespace TennisBookings.Web.Services
 
             return new WeatherResult()
             {
-                WeatherCondition = WeatherCondition.Sun
+                WeatherCondition = WeatherCondition.Rain
             };
         }
     }
